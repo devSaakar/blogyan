@@ -1,3 +1,11 @@
+@tailwind base;
+@tailwind components;
+
+.input{
+  @apply py-2 px-2 rounded-lg
+}
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -11,8 +19,10 @@ a {
   text-decoration: none;
 }
 
-* {
+*,body,h1,h2,h3,h4,h5,h6,p {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,3 +40,4 @@ form{
   flex-direction: column;
   gap: 0.5rem;
 }
+

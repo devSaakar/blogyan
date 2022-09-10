@@ -1,33 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
-import { db } from "../../../config/firebase";
+import React from "react";
+import Card from "../common/Card";
 
-const EnrolledList = () => {
-  const [students, setStudents] = useState([]);
-  useEffect(() => {
-    const collectionRef = collection(db, "students");
-    const q = query(collectionRef, orderBy("enrollTime", "asc"));
-
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      setStudents(
-        querySnapshot.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-          timestamp: doc.data().enrollTime?.toDate().getTime(),
-        }))
-      );
-    });
-    return unsubscribe;
-  }, []);
+const EnrolledList = ({students}) => {
 
   return (
     <div>
       <div>
-        <h3>Enrolled Students</h3>
-        <ol>
+        <h3 className="text-xl text-center font-semibold text-sky-400 uppercase border-b-2 border-amber-300">Enrolled Students</h3>
+        <ol className="px-8 my-8 justify-center grid lg:grid-cols-4 gap-12">
           {students?.length &&
-            students.map((student) => {
-              return <li key={student.enrollTime}>{student.name}</li>
+            students?.map((student) => {
+              return <Card key={student.id} item={student} />
             })}
         </ol>
       </div>
