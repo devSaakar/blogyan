@@ -5,7 +5,7 @@ import Navbar from "../src/components/common/Navbar";
 function MyApp({ Component, pageProps }) {
   return (
     <AuthProvider>
-      <div className="container mx-auto">
+      <div className="mx-auto bg-gray-800 min-h-screen">
         <Navbar />
         <div className="comnponent__container mt-8">
           <Component {...pageProps} />

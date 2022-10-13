@@ -94,18 +94,18 @@ const OnboardForm = () => {
   };
   return (
     <div className="w-full">
-      <h2 className="text-2xl my-3 text-center">OnboardForm</h2>
+      <h2 className="text-2xl my-3 text-center text-secondary">OnboardForm</h2>
       {loader ? (
         <Loader />
       ) : (
-        <div className="Onboard__Form mt-6 flex  flex-col-reverse lg:flex-row gap-5 lg:gap-2 items-center justify-around px-28">
+        <div className="Onboard__Form mt-6 flex  flex-col-reverse lg:flex-row gap-5 lg:gap-2 items-center justify-around px-8 lg:px-28">
           <div className="card">
             <Card image={preview} item={student} />
           </div>
-          <form className="w-80" action="submit">
+          <form className="w-80 lg:px-2 flex justify-between items-around gap-5" action="submit">
             <label
               htmlFor="profileImg"
-              className={`flex items-center cursor-pointer transition-all ease-in-out delay-300 duration-[2000ms] ${
+              className={`flex items-center text-white cursor-pointer w-40 transition-all ease-in-out delay-300 duration-[2000ms] ${
                 preview ? "translate-x-28" : ""
               }`}
               onChange={onSelectFile}
@@ -131,7 +131,7 @@ const OnboardForm = () => {
             </label>
 
             <div className="flex justify-between items-center mt-4">
-              <label className="" htmlFor="name">
+              <label className="text-white pr-4" htmlFor="name">
                 Name
               </label>
               <input
@@ -144,7 +144,7 @@ const OnboardForm = () => {
               />
             </div>
             <div className="flex justify-between items-center">
-              <label htmlFor="branch">Branch</label>
+              <label htmlFor="branch" className="text-white pr-4">Branch</label>
               <input
                 className="input"
                 type="text"
@@ -156,7 +156,7 @@ const OnboardForm = () => {
             </div>
 
             <div className="flex justify-between items-center">
-              <label htmlFor="year">Year</label>
+              <label htmlFor="year" className="text-white pr-4">Year</label>
               <input
                 className="input"
                 type="text"
@@ -168,7 +168,7 @@ const OnboardForm = () => {
             </div>
 
             <div className="flex justify-between items-center">
-              <label htmlFor="course">Course Enrolled</label>
+              <label htmlFor="course" className="text-white pr-4">Course Enrolled</label>
               <input
                 className="input"
                 type="text"
@@ -180,7 +180,7 @@ const OnboardForm = () => {
             </div>
 
             <div className="flex justify-between items-center">
-              <label htmlFor="phoneNumber">Whatsapp Number</label>
+              <label htmlFor="phoneNumber" className="text-white pr-4">Whatsapp Number</label>
               <input
                 className="input"
                 type="number"

@@ -13,8 +13,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="main flex-col justify items">
-        <h1 className="title text-center text-4xl font-semibold">
+      <main className="main flex-col justify items py-8">
+        <h1 className="title text-center text-4xl font-semibold text-primary">
           Welcome to{" "}
           <a target="_blank" rel="noreferrer" href="https://semi-colon-404.netlify.app/">
             Semi Colon Blogyan!

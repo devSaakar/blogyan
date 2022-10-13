@@ -1,30 +1,28 @@
-import { collection, getDocs, limit, orderBy, query } from 'firebase/firestore';
 import React from 'react'
-import { db } from '../config/firebase';
 
 import EnrolledList from '../src/components/EnrolledList'
 
-const Classroom = ({students}) => {
-  console.log('students :>> ', students);
+const Classroom = () => {
+  // console.log('students :>> ', props.students);
   return (
     <div className='Classroom__Container'>
-        <p className="text-4xl text-center py-4">
+        <p className="text-4xl text-secondary text-center py-4">
             Classroom
         </p>
-        <EnrolledList students = {students}  />
+        <EnrolledList />
     </div>
   )
 }
 
 export default Classroom
 
-export async function getServerSideProps() {
-  const students = [];
-  const querySnapshot = await getDocs(collection(db, "students"));
-  querySnapshot.forEach((doc) => {
-    students.push(JSON.parse(JSON.stringify({id: doc.id, ...doc.data()})));
-  });
-  return {
-    props: {students},
-  }
-}
+// export async function getServerSideProps() {
+//   const students = [];
+//   const querySnapshot = await getDocs(collection(db, "students"));
+//   querySnapshot.forEach((doc) => {
+//     students.push(JSON.parse(JSON.stringify({id: doc.id, ...doc.data()})));
+//   });
+//   return {
+//     props: {students},
+//   }
+// }
