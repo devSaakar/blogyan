@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import background from '../src/assets/MLendingPage.svg'
+import background from '../src/assets/LANDING_PAGE.png'
 import Footer from "../src/components/common/Footer";
 // import OnboardForm from "../src/components/OnboardForm";
 

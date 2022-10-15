@@ -16,7 +16,6 @@ const Footer = () => {
               layout="responsive"
             />
           </div>
-          <span className="ml-3 text-xl text-gray-500">Bro Code</span>
         </a>
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
           © 2022 Bro-Code —
