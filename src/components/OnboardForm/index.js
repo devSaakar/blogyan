@@ -94,7 +94,6 @@ const OnboardForm = () => {
   };
   return (
     <div className="w-full">
-      <h2 className="text-2xl my-3 text-center text-secondary">OnboardForm</h2>
       {loader ? (
         <Loader />
       ) : (

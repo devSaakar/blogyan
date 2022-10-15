@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="container flex flex-wrap justify-between items-center mx-auto relative">
         <Link href="/">
           <a className="flex items-center">
-            <Image src={Logo} height={40} width={40} alt="blogyan Logo" />
+            <Image className="rounded-md border-black" src={Logo} height={40} width={40} alt="blogyan Logo" />
             <span className="px-4 self-center text-xl font-semibold whitespace-nowrap text-white">
               Blogyan
             </span>
