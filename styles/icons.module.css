@@ -1,0 +1,26 @@
+
+.user-icon {
+    background: url(/images/user.png) no-repeat;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.logo-icon {
+    background: url(/images/logo.png) no-repeat;
+    width: 500px;
+    height: 500px;
+    transform: scale(0.1);       
+    cursor: pointer;
+}
+.google-icon {
+    background: url(/images/google.png) no-repeat;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.gallery-icon {
+    background: url(/images/gallery.png) no-repeat;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}

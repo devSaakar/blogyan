@@ -6,6 +6,8 @@
 }
 @tailwind utilities;
 
+@import './icons.module.css';
+
 html,
 body {
   padding: 0;
