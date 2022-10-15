@@ -20,7 +20,7 @@ const Card = ({ item, image }) => {
   }, [id]);
 
   return (
-    <div className="max-w-sm rounded-lg overflow-hidden shadow-lg text-center bg-yellow-300 ">
+    <div className="max-w-sm rounded-lg overflow-hidden shadow-lg text-center bg-sky-800 ">
       <div className=" my-3 lg:mx-6 grid grid-cols-1 lg:grid-cols-2 justify-between items-center">
         <div className="Card-image relative w-32 h-32 rounded-lg overflow-hidden mx-auto">
           {profile ? (
@@ -36,12 +36,12 @@ const Card = ({ item, image }) => {
             alt="card.png"
           />}
         </div>
-        <div className="font-bold text-xl mb-2 text-blue-500 pt-4 lg:pt-0">
+        <div className="font-bold text-xl mb-2 text-white pt-4 lg:pt-0">
           {name}
         </div>
       </div>
       <div className="px-6 py-2">
-        <p className="text-gray-700 text-base">
+        <p className="text-white text-base">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
           nihil.
         </p>

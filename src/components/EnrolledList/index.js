@@ -26,7 +26,7 @@ const EnrolledList = () => {
   return (
     <div>
       <div>
-        <h3 className="text-xl text-center font-semibold text-sky-400 uppercase border-b-2 border-amber-300">Enrolled Students</h3>
+        <h3 className="text-xl text-center font-semibold text-sky-400 uppercase">Enrolled Students</h3>
         <ol className="px-8 py-8 justify-center grid lg:grid-cols-4 gap-12">
           {students?.length &&
             students?.map((student) => {
