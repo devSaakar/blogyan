@@ -28,7 +28,7 @@ const Navbar = () => {
           <a className="flex items-center">
             <Image className="rounded-md border-black" src={Logo} height={40} width={40} alt="blogyan Logo" />
             <span className="px-4 self-center text-xl font-semibold whitespace-nowrap text-white">
-              Blogyan
+              {`<BRO-CODE />`}
             </span>
           </a>
         </Link>
