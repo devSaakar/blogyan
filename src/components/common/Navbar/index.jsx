@@ -5,7 +5,8 @@ import Image from "next/image";
 import { auth } from "../../../../config/firebase";
 import { useAuth } from "../Auth";
 import MenuIcon from "./MenuIcon";
-import Logo from "../../../assets/logo.svg";
+import Logo from "../../../assets/logo_img.svg";
+import LogoText from "../../../assets/logo_text.svg";
 import ROUTES from "../../../../config/routes";
 
 const Navbar = () => {
@@ -26,10 +27,15 @@ const Navbar = () => {
       <div className="container flex flex-wrap justify-between items-center mx-auto relative">
         <Link href="/">
           <a className="flex items-center">
-            <Image className="rounded-md border-black" src={Logo} height={40} width={40} alt="blogyan Logo" />
-            <span className="px-4 self-center text-xl font-semibold whitespace-nowrap text-white">
+          <div className="relative w-20 lg:w-32 h-16 ">
+            <Image className="rounded-md border-black" src={Logo} layout="fill" objectFit="cover" alt="logo.png" />
+          </div>
+          <div className="relative w-28 lg:w-48 h-16 ">
+            <Image className="rounded-md border-black" src={LogoText} layout="fill" objectFit="cover" alt="logo.png" />
+          </div>
+            {/* <span className="px-4 self-center text-xl font-semibold whitespace-nowrap text-white">
               {`<BRO-CODE />`}
-            </span>
+            </span> */}
           </a>
         </Link>
         <button

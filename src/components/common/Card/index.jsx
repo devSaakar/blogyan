@@ -1,7 +1,7 @@
 import { getDownloadURL, getStorage, ref } from "firebase/storage";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import DefaultImage from "../../../assets/user.png";
+import DefaultImage from "../../../assets/gallery.png";
 
 const Card = ({ item, image }) => {
   const { name, id, branch, course, year, phoneNumber } = item;
@@ -20,7 +20,7 @@ const Card = ({ item, image }) => {
   }, [id]);
 
   return (
-    <div className="max-w-sm rounded-lg overflow-hidden shadow-lg text-center bg-sky-800 ">
+    <div className="max-w-sm rounded-lg overflow-hidden shadow-lg text-center bg-secondary ">
       <div className=" my-3 lg:mx-6 grid grid-cols-1 lg:grid-cols-2 justify-between items-center">
         <div className="Card-image relative w-32 h-32 rounded-lg overflow-hidden mx-auto">
           {profile ? (
@@ -36,7 +36,7 @@ const Card = ({ item, image }) => {
             alt="card.png"
           />}
         </div>
-        <div className="font-bold text-xl mb-2 text-white pt-4 lg:pt-0">
+        <div className="font-bold text-xl mb-2 text-gray-600 pt-4 lg:pt-0">
           {name}
         </div>
       </div>

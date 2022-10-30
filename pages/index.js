@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import background from '../src/assets/LANDING_PAGE.png'
-import Footer from "../src/components/common/Footer";
+import OnboardForm from "../src/components/OnboardForm/index"
 // import OnboardForm from "../src/components/OnboardForm";
 
 export default function Home() {
@@ -16,8 +16,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="main flex-col">
-        {/* <h1 className="title text-center text-4xl font-semibold text-primary">
+      <main className="main flex-col mt-6">
+        <h1 className="title text-center text-4xl font-semibold text-primary">
           Welcome to{" "}
           <a target="_blank" rel="noreferrer" href="https://semi-colon-404.netlify.app/">
             Semi Colon Blogyan!
@@ -25,16 +25,7 @@ export default function Home() {
         </h1>
         <div className="onboard__form__container mt-8 mx-auto">
           <OnboardForm />
-        </div> */}
-
-      <Image
-            className=""
-            src={background}
-            layout="responsive"
-            objectFit="cover"
-            alt="card.png"
-          />
-      <Footer />
+        </div>
       </main>
     </div>
   );

@@ -6,14 +6,14 @@ const Pricing = () => {
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-4 mx-auto">
           <div className="flex flex-col text-center w-full mb-20">
-            <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">
+            <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-primary">
               Pricing
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
               Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.
             </p>
-            <div className="flex mx-auto border-2 border-indigo-500 rounded overflow-hidden mt-6">
-              <button className="py-1 px-4 bg-indigo-500 text-white focus:outline-none">
+            <div className="flex mx-auto border-2 border-secondary rounded overflow-hidden mt-6">
+              <button className="py-1 px-4 bg-secondary text-white focus:outline-none">
                 Monthly
               </button>
               <button className="py-1 px-4 focus:outline-none">Annually</button>
@@ -96,8 +96,8 @@ const Pricing = () => {
               </div>
             </div>
             <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
-              <div className="h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden bg-white">
-                <span className="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
+              <div className="h-full p-6 rounded-lg border-2 border-secondary flex flex-col relative overflow-hidden bg-white">
+                <span className="bg-secondary text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
                   POPULAR
                 </span>
                 <h2 className="text-sm tracking-widest title-font mb-1 font-medium">
@@ -173,7 +173,7 @@ const Pricing = () => {
                   </span>
                   Mixtape chillwave tumeric
                 </p>
-                <button className="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">
+                <button className="flex items-center mt-auto text-white bg-secondary border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">
                   Button
                   <svg
                     fill="none"

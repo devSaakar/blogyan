@@ -6,7 +6,7 @@ const Classroom = () => {
   // console.log('students :>> ', props.students);
   return (
     <div className='Classroom__Container'>
-        <p className="text-4xl text-secondary text-center py-4">
+        <p className="text-4xl text-primary text-center py-4">
             Classroom
         </p>
         <EnrolledList />
