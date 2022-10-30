@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     <AuthProvider>
       <div className="mx-auto bg-gray-800 min-h-screen flex flex-col justify-between">
         <Navbar />
-        <div className="comnponent__container">
+        <div className="comnponent__container pt-24">
           <Component {...pageProps} />
         </div>
         <Footer />

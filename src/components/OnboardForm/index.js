@@ -190,7 +190,7 @@ const OnboardForm = () => {
               />
             </div>
             <button
-              className="my-3 bg-white text-black p-2 rounded-lg hover:bg-slate-500 hover:text-white"
+              className="my-3 bg-gradient-to-r from-secondary to-primary text-white font-semibold p-2 rounded-lg hover:bg-slate-500 hover:text-white"
               onClick={handleSubmit}
             >
               Submit
