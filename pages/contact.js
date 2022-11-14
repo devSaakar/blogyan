@@ -1,4 +1,7 @@
+import { async } from "@firebase/util";
+import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import React, { useState } from "react";
+import { db } from "../config/firebase";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -6,9 +9,44 @@ const Contact = () => {
     name:'',
     message:"",
   })
-  const handleChange = () =>{
+
+
+  const handleChange = (e) =>{
+    const {name,value} = e.target;
+    console.log('form.mobile :>> ', typeof (form.mobile*1));
+    if(name==="mobile"){
+      console.log('Entered');
+      console.log('!(/^[0-9]{11}$/.test(form.mobile)) :>> ', !(/^[0-9]{11}$/.test(form.mobile)));
+      console.log('value :>> ', value);
+      if((/^[0-9]{11}$/.test(value))){
+        return false;
+      }
+      if( !Number.isInteger(value*1)){
+        console.log('Not A number');
+        
+        return false;
+      }
+    }
+    setForm({...form,[name]:value})
 
   }
+
+  const handleSubmit = async (e) =>{
+    e.preventDefault();
+    console.log('form :>> ', form);
+    await setDoc(doc(db, "enquiry", form.mobile), {
+      form:form,
+      enrollTime: serverTimestamp(),
+    }).then(()=>{
+      alert("Success");
+      setForm({
+        mobile:'',
+        name:'',
+        message:"",})
+    });
+  }
+
+  const {name,mobile,message} = form;
   return (
     <div className="bg-gray-800">
       <section className="text-gray-600 body-font relative py-2">
@@ -50,12 +88,12 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 px-8 rounded-lg py-4 mb-4">
+          <form  onSubmit={handleSubmit}  className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 px-8 rounded-lg py-4 mb-4">
             <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
-              Feedback
+              Admission
             </h2>
             <p className="leading-relaxed mb-5 text-gray-600">
-              Please provide your valuable feedback
+              Admission Query
             </p>
             <div className="relative mb-4">
               <label htmlFor="name" className="leading-7 text-sm text-gray-600">
@@ -65,6 +103,8 @@ const Contact = () => {
                 type="text"
                 id="name"
                 name="name"
+                value={name}
+                onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
@@ -79,6 +119,8 @@ const Contact = () => {
                 type="tel"
                 id="mobile"
                 name="mobile"
+                value={mobile}
+                onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
@@ -92,16 +134,18 @@ const Contact = () => {
               <textarea
                 id="message"
                 name="message"
+                value={message}
+                onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               ></textarea>
             </div>
-            <button className="text-white bg-secondary border-0 py-2 px-6 focus:outline-none hover:bg-primary rounded text-lg">
+            <button onSubmit={handleSubmit} type="submit" className="text-white bg-secondary border-0 py-2 px-6 focus:outline-none hover:bg-primary rounded text-lg">
               Submit
             </button>
             <p className="text-xs text-gray-500 mt-3">
               Register at your own responsibility
             </p>
-          </div>
+          </form>
         </div>
       </section>
     </div>
