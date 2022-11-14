@@ -19,7 +19,7 @@ const Pricing = () => {
               <button className="py-1 px-4 focus:outline-none">Annually</button>
             </div> */}
           </div>
-          <div className="flex flex-wrap flex-col-reverse lg:flex-row  justify-center items-center lg:items-start -m-4 w-100">
+          <div className="flex flex-wrap flex-col-reverse lg:flex-row justify-items-stretch lg:justify-center items-center lg:items-start -m-4 w-100">
             <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
               <div className="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden bg-white">
                 <span className="bg-gray-400 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
