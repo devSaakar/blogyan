@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [form, setForm] = useState({
+    mobile:'',
+    name:'',
+    message:"",
+  })
+  const handleChange = () =>{
+
+  }
   return (
     <div className="bg-gray-800">
       <section className="text-gray-600 body-font relative py-2">
@@ -17,6 +25,7 @@ const Contact = () => {
               src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Lane no 5, Post Office Rd, Clement Town, Dehradun, Uttarakhand 248002&amp;t=p&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               className="absolute inset-0 filter: grayscale(1) contrast(1.2) opacity(0.4)"
             ></iframe>
+            
             <div className="bg-gray-100 relative flex flex-wrap mt-80 md:mt-0 rounded shadow-md py-4">
               <div className="lg:w-1/2 px-6">
                 <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
@@ -61,15 +70,15 @@ const Contact = () => {
             </div>
             <div className="relative mb-4">
               <label
-                htmlFor="email"
+                htmlFor="mobile"
                 className="leading-7 text-sm text-gray-600"
               >
-                Email
+                Phone Number
               </label>
               <input
-                type="email"
-                id="email"
-                name="email"
+                type="tel"
+                id="mobile"
+                name="mobile"
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
