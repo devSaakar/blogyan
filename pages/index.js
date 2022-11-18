@@ -1,32 +1,23 @@
-import Head from "next/head";
 import Image from "next/image";
-import background from '../src/assets/LANDING_PAGE.png'
-import OnboardForm from "../src/components/OnboardForm/index"
-// import OnboardForm from "../src/components/OnboardForm";
+import mobileHome from "../src/assets/LANDING_PAGE.png";
+import background from "../src/assets/Home_Bg.png";
+import phoneBg from "../src/assets/phone_transparent.png";
 
 export default function Home() {
   return (
-    <div className="homepage__container">
-      <Head>
-        <title>Bro Code</title>
-        <meta
-          name="description"
-          content="Blogyan is an community to share your knowledge of Web Development"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="main flex-col mt-6">
-        <h1 className="title text-center text-4xl font-semibold text-primary">
-          Welcome to{" "}
-          <a target="_blank" rel="noreferrer" href="https://semi-colon-404.netlify.app/">
-            Bro Code!
-          </a>
-        </h1>
-        <div className="onboard__form__container mt-8 mx-auto">
-          <OnboardForm />
+    <div className="homepage__container relative lg:-mt-16 overflow-hidden transfor">
+      {/* <div className="mt-4 grid grid-cols-2 gap-4 min-w-full bg-purple-500 relative h-85vh">
+        <div className="absolute -top-40 bg-primary rotate-3 min-w-full h-screen">xyzz lorem450</div>
+        <div className="flex justify-center items-center">
+          <div className="relative mt-20 bg-yellow-300 h-96 w-96">
+            <Image src={phoneBg} layout="fill" alt="phone.png" />
+          </div>
         </div>
-      </main>
+      </div> */}
+      {/* <div className="relative min-h-screen">
+      <Image src={background} layout="fill" objectFit="cover" alt="bg.png"  />
+      </div> */}
+      <Image src={mobileHome} layout="responsive" objectFit="cover" alt="banner"/>
     </div>
   );
 }

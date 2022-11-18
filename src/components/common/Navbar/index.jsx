@@ -23,7 +23,7 @@ const Navbar = () => {
   }, [pathname]);
 
   return (
-    <nav className="border-gray-200 px-2 sm:px-4 py-2.5 rounded bg-gray-900 fixed top-0 min-w-full z-10">
+    <nav className="sticky top-0 border-gray-200 px-2 sm:px-4 py-2.5 rounded-b-xl bg-gray-900 min-w-full z-10">
       <div className="container flex flex-wrap justify-between items-center mx-auto relative">
         <Link href="/">
           <a className="flex items-center">

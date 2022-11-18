@@ -143,7 +143,7 @@ const Contact = () => {
               Submit
             </button>
             <p className="text-xs text-gray-500 mt-3">
-              Register at your own responsibility
+              Register to be an ideal candidate for recruiters.
             </p>
           </form>
         </div>

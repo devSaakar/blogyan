@@ -9,6 +9,11 @@ module.exports = {
       },
       translate:{
       '120':'120%',
+      },
+      rotate:{
+        18:'18deg',
+        24:'24deg',
+        36:'36deg',
       }
     },
   },
