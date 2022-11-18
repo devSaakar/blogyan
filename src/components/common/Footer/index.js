@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import Logo from "../../../assets/logo_img.svg";
 
@@ -17,7 +18,9 @@ const Footer = () => {
             />
           </div>
         </a>
-        <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+        <div className="center flex flex-col lg:flex-row items-center flex-grow justify-center">
+        <div className="footer__cta "><Link href="/register"><button className="px-3 bg-secondary rounded-lg py-1 mt-4 lg:mt-0">Register Now</button></Link></div>
+        <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 lg:mt-0">
           © 2022 Bro-Code —
           <a
             href="https://www.linkedin.com/in/sakarchauhan/"
@@ -28,8 +31,10 @@ const Footer = () => {
             @devSakar
           </a>
         </p>
-        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-          <a className="pt-4 text-primary" href="tel:9149032877">
+
+        </div>
+        <span className="flex sm:ml-auto sm:mt-0 justify-center sm:justify-start items-start">
+          <a className="pt-4 lg:pt-0 text-primary" href="tel:9149032877">
             <p>Contact : 9149032877</p>
           </a>
         </span>
