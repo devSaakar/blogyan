@@ -57,7 +57,7 @@ const Navbar = () => {
                 <li key={route}>
                   <Link href={route}>
                     <a
-                      className={`block py-2 px-6 mx-1 text-white  rounded hover:bg-primary ${
+                      className={`block py-2 px-6 mx-1 text-white  rounded hover:bg-primary hover:text-black ${
                         pathname === route ? "bg-secondary" : ""
                       }`}
                     >
