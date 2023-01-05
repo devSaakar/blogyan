@@ -47,7 +47,7 @@ const Navbar = () => {
         </button>
         <div
           className={`${
-            open ? "absolute right-0 top-10 text-center z-10" : "hidden"
+            open ? "absolute right-0 top-10 -z-10 text-center" : "absolute text-center w-0 right-0 -top-60 lg:static"
           } w-full lg:block lg:w-auto transition-all ease-in-out duration-700`}
           id="navbar-default"
         >
