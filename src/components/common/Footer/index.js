@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="center flex flex-col lg:flex-row items-center flex-grow justify-center">
         <div className="footer__cta "><Link href="/register"><button className="px-3 bg-secondary rounded-lg py-1 mt-4 lg:mt-0 text-white">Register Now</button></Link></div>
         <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 lg:mt-0">
-          © 2022 Bro-Code —
+          © 2023 Bro-Code —
           <a
             href="https://www.linkedin.com/in/sakarchauhan/"
             className="text-gray-600 ml-1"
